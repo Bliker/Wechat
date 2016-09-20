@@ -19,8 +19,8 @@ class Send{
         $req->setSmsParam("{\"v_code\":\"".$v_code."\"}");
         $req->setRecNum($number);
         $req->setSmsTemplateCode("SMS_14990088");
-        $resp = $c->execute($req);
-        return $resp;
+        $c->execute($req);
+        return $v_code;
     }
 }
 
