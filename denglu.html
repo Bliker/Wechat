@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<script language = "javascript"><!--使用js验证-->
+function Checked()
+{
+    if(myform.username.value == "")//如果用户名为空
+    {
+        alert("您还没有填写登录姓名！");
+        myform.username.focus();
+        return false;
+    }
+    if(myform.password.value == "")//如果密码为空
+    {
+        alert("您忘记填写密码了！");
+        myform.password.focus();
+        return false;
+    }
+}
+</script>
+<body>
+<form action="Login.php" method="post" name="myform">
+    <table>
+        <tr>
+            <td>姓名:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="登陆" name="denglu"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
